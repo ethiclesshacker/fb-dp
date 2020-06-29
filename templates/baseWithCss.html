@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="https://picsum.photos/200" type="image/x-icon"> -->
+    <!-- Add custom icon. Someday? -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    <title>{% block title %} {% endblock %} </title>
+</head>
+<body>
+    <!-- <header>
+        <div class="header-div">
+            <h1>Welcome to my page!</h1>
+        </div>
+    </header> -->
+
+    <div class="main-div">
+
+        <div class="head-div">
+            <!-- <h2>Instagram DP Viewer</h2> -->
+            <h1>{% block heading %} {% endblock %} </h1>
+        </div>
+
+        <div class="form-div">
+            <!-- <form action="#" method="get">
+                <input type="text" name="userID" placeholder="Enter Instagram ID" class="inputField" value="">
+                <input type="submit" value="Submit">
+            </form> -->
+            {% block form %} {% endblock %}
+        </div>
+
+        <div class="sub-div">
+            {% block subDiv %} {% endblock %}
+        </div>
+        {% block body %} {% endblock %}
+    </div>
+    
+    <footer>
+        <div class="foot-div">
+            <p>Made with love by 
+                <a href="https://www.instagram.com/avs.dev" target="_blank"> @avs.dev</a>
+            </p>    
+        </div>
+    </footer>
+</body>
+</html>

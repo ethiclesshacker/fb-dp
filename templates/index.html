@@ -1,0 +1,43 @@
+{% extends "baseWithCss.html" %}
+
+{% block title %}
+View Instagram DP
+{% endblock %}
+
+
+{% block heading %}
+View Instagram DP
+{% endblock %}
+
+
+<!-- <div class="main-div">
+    <form action="#" method="post">
+        Enter Instagram ID : <input type="text" name="userID" class="inputField" value="{{ id }}">
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="sub-div">
+        <img src={{ imgLink }}>
+    </div>
+
+    <div class="sub-div">
+        {% for link in links %}
+            <img src= {{ link }} alt="" class="img300">
+        {% endfor %}
+    </div>
+</div> -->
+
+{% block form %}
+<form action="#" method="post">
+    <input type="text" name="link" placeholder="Enter Instagram ID" class="inputField">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
+
+
+{% block body %}
+<div class="sub-div">
+    <img src={{ imgLink }}>
+</div>
+
+{% endblock %}
